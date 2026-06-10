@@ -23,7 +23,7 @@ function formatBerlinTime() {
 
   return {
     time: `${pad(get('hour'))}:${pad(get('minute'))}`,
-    date: `${get('weekday')}, ${get('day')}. ${get('month')}`
+    date: `${get('weekday')} ${get('day')}. ${get('month')}`
   };
 }
 
@@ -107,10 +107,10 @@ export default function handler(request) {
           {
             style: {
               color: 'white',
-              fontSize: '34px',
-              fontWeight: 700,
+              fontSize: '36px',
+              fontWeight: 800,
               letterSpacing: '2px',
-              textShadow: '0 1px 6px rgba(0,0,0,0.8)'
+              textShadow: '0 1px 2px rgba(0,0,0,0.95)'
             }
           },
           time
@@ -119,11 +119,12 @@ export default function handler(request) {
           'div',
           {
             style: {
-              color: 'rgba(255,255,255,0.88)',
-              fontSize: '12px',
+              color: 'rgba(255,255,255,0.94)',
+              fontSize: '13px',
+              fontWeight: 700,
               marginTop: '2px',
               letterSpacing: '0.5px',
-              textShadow: '0 1px 4px rgba(0,0,0,0.7)'
+              textShadow: '0 1px 2px rgba(0,0,0,0.9)'
             }
           },
           date
