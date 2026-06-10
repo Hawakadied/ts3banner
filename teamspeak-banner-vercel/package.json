@@ -4,8 +4,7 @@
     "start": "vercel dev"
   },
   "dependencies": {
-    "@vercel/og": "latest",
-    "react": "latest"
+    "@vercel/og": "latest"
   },
   "devDependencies": {
     "vercel": "latest"
