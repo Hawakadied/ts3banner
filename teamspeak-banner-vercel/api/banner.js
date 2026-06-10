@@ -1,4 +1,3 @@
-import React from 'react';
 import { ImageResponse } from '@vercel/og';
 
 export const config = {
@@ -39,7 +38,19 @@ function safeBackgroundUrl(request) {
   return `${origin}/${image.replace(/^\/+/, '')}`;
 }
 
-const el = React.createElement;
+function el(type, props, ...children) {
+  return {
+    $$typeof: Symbol.for('react.element'),
+    type,
+    key: null,
+    ref: null,
+    props: {
+      ...(props || {}),
+      children: children.length <= 1 ? children[0] : children
+    },
+    _owner: null
+  };
+}
 
 export default function handler(request) {
   const backgroundUrl = safeBackgroundUrl(request);
