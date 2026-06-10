@@ -29,7 +29,7 @@ function formatBerlinTime() {
 
 function safeBackgroundUrl(request) {
   const { searchParams, origin } = new URL(request.url);
-  const image = searchParams.get('bg') || `${origin}/background.png`;
+  const image = searchParams.get('bg') || `${origin}/hf.png`;
 
   if (image.startsWith('http://') || image.startsWith('https://')) {
     return image;
